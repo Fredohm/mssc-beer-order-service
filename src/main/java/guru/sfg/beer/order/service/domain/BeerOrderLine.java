@@ -43,7 +43,6 @@ public class BeerOrderLine extends BaseEntity {
         this.beerOrder = beerOrder;
         this.beerId = beerId;
         this.upc = upc;
-
         this.orderQuantity = orderQuantity;
         this.quantityAllocated = quantityAllocated;
     }
