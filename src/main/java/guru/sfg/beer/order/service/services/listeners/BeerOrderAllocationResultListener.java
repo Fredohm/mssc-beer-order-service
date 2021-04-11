@@ -25,4 +25,21 @@ public class BeerOrderAllocationResultListener {
             beerOrderManager.beerOrderAllocationFailed(allocateOrderResult.getBeerOrderDto());
         }
     }
+//    private final JmsTemplate jmsTemplate;
+//
+//    @JmsListener(destination = JmsConfig.ALLOCATE_ORDER_QUEUE)
+//    public void listen(Message msg) {
+//        AllocateOrderRequest request = (AllocateOrderRequest)  msg.getPayload();
+//
+//        request.getBeerOrderDto().getBeerOrderLines().forEach(beerOrderLineDto -> {
+//            beerOrderLineDto.setQuantityAllocated(beerOrderLineDto.getOrderQuantity());
+//        });
+//
+//        jmsTemplate.convertAndSend(JmsConfig.ALLOCATE_ORDER_RESPONSE_QUEUE,
+//                AllocateOrderResult.builder()
+//                        .beerOrderDto(request.getBeerOrderDto())
+//                        .pendingInventory(false)
+//                        .allocationError(false).build()
+//        );
+//    }
 }
